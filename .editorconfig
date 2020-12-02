@@ -3,10 +3,12 @@
 # top-most EditorConfig file
 root = true
 
-[*]
-indent_style = space
-indent_size = 2
-end_of_line = lf
-charset = utf-8
+# rule untuk semua ekstensi file .js .php. .go .rb jika semua ekstensi kasih tanda * 
+# jika hanya satu ektensi seperti ini [*.py] ubah akiran ekstensinya
+[*] 
+indent_style = space # style indent nya menggunakan space atau tab
+indent_size = 2 # size indent nya atau jaraknya berapa
+end_of_line = lf # akhiran suatu file lf atau crlf
+charset = utf-8 # charset default
 trim_trailing_whitespace = false
 insert_final_newline = false
