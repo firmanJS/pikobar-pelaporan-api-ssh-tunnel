@@ -6,18 +6,24 @@ const convertDate = (dates) => moment(dates).format('YYYY/MM/DD')
 
 const patientStatus = (params) => {
   let finalResult
-  if (params === '1') {
-    finalResult = STATUS_PASIEN.SELESAI
-  } else if (params === '2') {
-    finalResult = STATUS_PASIEN.MENINGGAL
-  } else if (params === '3') {
-    finalResult = STATUS_PASIEN.DISCARDED
-  } else if (params === '4') {
-    finalResult = STATUS_PASIEN.SAKIT
-  } else if (params === '5') {
-    finalResult = STATUS_PASIEN.KARANTINA
-  } else {
-    finalResult = STATUS_PASIEN.NEGATIF
+  switch (params) {
+    case '1':
+      finalResult = STATUS_PASIEN.SELESAI
+      break
+    case '2':
+      finalResult = STATUS_PASIEN.MENINGGAL
+      break
+    case '3':
+      finalResult = STATUS_PASIEN.DISCARDED
+      break
+    case '4':
+      finalResult = STATUS_PASIEN.SAKIT
+      break
+    case '5':
+      finalResult = STATUS_PASIEN.KARANTINA
+      break
+    default:
+      finalResult = STATUS_PASIEN.NEGATIF
   }
 
   return finalResult
