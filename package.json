@@ -4,7 +4,7 @@
   "description": "pikobar pelaporan connect to mongodb using ssh tunnel",
   "main": "server.js",
   "scripts": {
-    "prod": "pm2 server.js",
+    "prod": "pm2 start",
     "dev": "nodemon --max-old-space-size=2048 server.js",
     "test": "nyc --reporter=html mocha --timeout 10000",
     "coverage": "nyc --reporter=text mocha --check-coverage --lines 90"
@@ -18,19 +18,25 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-rate-limit": "^5.2.3",
     "helmet": "^4.2.0",
     "json2xls": "^0.1.2",
     "mocha": "^8.2.1",
     "moment": "^2.29.1",
     "mongoose": "^5.11.0",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.6",
     "nyc": "^15.1.0",
     "pm2": "^4.5.0",
     "tunnel-ssh": "^4.1.4"
   },
   "devDependencies": {
-    "eslint": "^7.14.0",
+    "eslint": "^7.15.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1"
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
   }
 }
