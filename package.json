@@ -4,7 +4,7 @@
   "description": "pikobar pelaporan connect to mongodb using ssh tunnel",
   "main": "server.js",
   "scripts": {
-    "prod": "pm2 start",
+    "prod": "pm2 start ecosystem.config.js",
     "dev": "nodemon --max-old-space-size=2048 server.js",
     "test": "nyc --reporter=html mocha --timeout 10000",
     "coverage": "nyc --reporter=text mocha --check-coverage --lines 90"
@@ -28,7 +28,8 @@
     "nodemon": "^2.0.6",
     "nyc": "^15.1.0",
     "pm2": "^4.5.0",
-    "tunnel-ssh": "^4.1.4"
+    "tunnel-ssh": "^4.1.4",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
     "eslint": "^7.15.0",
