@@ -12,6 +12,7 @@
   "author": "firmanjs",
   "license": "ISC",
   "dependencies": {
+    "app-root-path": "^3.0.0",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "compression": "^1.7.4",

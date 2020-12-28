@@ -1,12 +1,13 @@
-const winston = require('winston')
+const appRoot = require('app-root-path');
+const winston = require('winston');
 
-// define the custom settings for each transport (file, console)
 const options = {
   file: {
     level: 'info',
+    filename: `${appRoot}/logs/info.log`,
     handleExceptions: true,
     json: true,
-    maxsize: 5242880, // 5MB
+    maxsize: 5242880,
     maxFiles: 5,
     colorize: false,
   },
@@ -18,22 +19,18 @@ const options = {
   },
 };
 
-// instantiate a new Winston Logger with the settings defined above
-const logger = new winston.Logger({
+const logger = winston.createLogger({
   transports: [
-    // new winston.transports.File(options.file),
+    new winston.transports.File(options.file),
     new winston.transports.Console(options.console)
   ],
-  exitOnError: false, // do not exit on handled exceptions
+  exitOnError: false
 });
 
-// create a stream object with a 'write' function that will be used by `morgan`
 logger.stream = {
   write(message) {
     logger.info(message);
   },
 };
 
-module.exports = {
-  logger
-}
+module.exports = logger

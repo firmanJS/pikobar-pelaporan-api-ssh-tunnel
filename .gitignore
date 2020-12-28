@@ -1,3 +1,4 @@
 .env
 .clinic/
 /node_modules/
+/logs/info.log
