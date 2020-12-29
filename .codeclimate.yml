@@ -4,7 +4,7 @@ checks:
     enabled: true
     config:
       languages:
-      - javascript
+      - nodejs
   duplication:
     enabled: true
     config:
