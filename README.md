@@ -2,11 +2,11 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/256debe3f520afa16e5a/maintainability)](https://codeclimate.com/github/firmanJS/pikobar-pelaporan-api-ssh-tunnel/maintainability)
 
 #### Cara Menjalanakan
-1. copy file .env-sample di terminal dengan menggunakan perintah
+- copy file .env-sample di terminal dengan menggunakan perintah
 ```sh
 cp .env-sample .env
 ```
-lalu isi kolom kolomnya
+- lalu isi kolom kolomnya
 ```sh
 APP_PORT=3000
 TZ=Asia/Jakarta
@@ -21,7 +21,7 @@ PORT_LOCAL=#port db local remote
 LOCAL_HOST=#host in local remote
 SSH_KEY_PATH=# path to ssh key in your machine
 ```
-2. install package nya dengan perintah sebagai berikut
+- install package nya dengan perintah sebagai berikut
 ```sh
 npm install
 ```
