@@ -3,7 +3,13 @@
 
 #### Cara Menggunakan
 copy file .env-sample di terminal dengan menggunakan perintah
+
 ```sh
-cp .env-sample .env
+$ cp .env-sample .env
+```
+
+install depedencies
+```sh
+$ npm install
 ```
 <!-- pm2 ecosystem # generates a config file -->

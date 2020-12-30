@@ -10,7 +10,6 @@ const router = require('./routes')
 
 const app = express()
 
-// app.use(morgan('common', { stream: logger.stream })) // logger
 app.use(morgan('common')) // logger
 app.use(helmet())
 app.use(compress()) // gzip compression
