@@ -1,7 +1,6 @@
 ### Pikobar Pelaporan API Koneksi Ke Database Menggunakan SSH Tunnel
 [![Maintainability](https://api.codeclimate.com/v1/badges/256debe3f520afa16e5a/maintainability)](https://codeclimate.com/github/firmanJS/pikobar-pelaporan-api-ssh-tunnel/maintainability)
 
-<<<<<<< HEAD
 #### Cara Menggunakan
 copy file .env-sample di terminal dengan menggunakan perintah
 
@@ -9,14 +8,6 @@ copy file .env-sample di terminal dengan menggunakan perintah
 $ cp .env-sample .env
 ```
 
-install depedencies
-=======
-#### Cara Menjalanakan
-- copy file .env-sample di terminal dengan menggunakan perintah
->>>>>>> 21a4eb00ba23a505960bc6971494f46aaf1b99f8
-```sh
-$ npm install
-```
 - lalu isi kolom kolomnya
 ```sh
 APP_PORT=3000
@@ -32,7 +23,9 @@ PORT_LOCAL=#port db local remote
 LOCAL_HOST=#host in local remote
 SSH_KEY_PATH=# path to ssh key in your machine
 ```
+
 - install package nya dengan perintah sebagai berikut
+
 ```sh
 npm install
 ```
