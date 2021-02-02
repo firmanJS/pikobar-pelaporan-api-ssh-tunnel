@@ -1,6 +1,7 @@
 const express = require('express')
 const helmet = require('helmet')
 const compress = require('compression')
+const morgan = require('morgan')
 const cors = require('cors')
 const json2xls = require('json2xls')
 const { notFoundHandler, errorHandler } = require('./utils/exceptions')
@@ -9,7 +10,8 @@ const router = require('./routes')
 
 const app = express()
 
-app.use(helmet());
+app.use(morgan('common')) // logger
+app.use(helmet())
 app.use(compress()) // gzip compression
 app.use(helmet()) // secure apps by setting various HTTP headers
 app.use(cors()) // enable cors

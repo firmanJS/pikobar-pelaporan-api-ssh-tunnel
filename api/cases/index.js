@@ -8,7 +8,11 @@ const exportWaitAndRejectCase = async (req, res) => {
     const code = req.query.city
     const result = await Case.aggregate(sqlCondition(code))
     const data = result.map((r) => excellOutput(r))
-    res.xls('data.xlsx', data);
+    if (data.length > 0) {
+      res.xls('data.xlsx', data)
+    } else {
+      res.json({ data: 'not available' })
+    }
   } catch (error) {
     errorResponse(res, error, 402)
   }
