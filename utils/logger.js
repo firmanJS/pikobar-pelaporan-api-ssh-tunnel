@@ -1,10 +1,10 @@
-const appRoot = require('app-root-path');
+// const appRoot = require('app-root-path');
 const winston = require('winston');
 
 const options = {
   file: {
     level: 'info',
-    filename: `${appRoot}/logs/info.log`,
+    // filename: `${appRoot}/logs/info.log`,
     handleExceptions: true,
     json: true,
     maxsize: 5242880,
@@ -21,7 +21,7 @@ const options = {
 
 const logger = winston.createLogger({
   transports: [
-    new winston.transports.File(options.file),
+    // new winston.transports.File(options.file),
     new winston.transports.Console(options.console)
   ],
   exitOnError: false
