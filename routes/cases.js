@@ -8,7 +8,7 @@ const limiter = rateLimit({
   max: 10
 })
 
-router.get('/api/export-case-waiting', limiter, async (req, res) => {
+router.get('/export-case-waiting', limiter, async (req, res) => {
   await exportWaitAndRejectCase(req, res)
 })
 
