@@ -1,6 +1,6 @@
 const express = require('express')
 const rateLimit = require('express-rate-limit')
-const { exportWaitAndRejectCase } = require('../api/cases')
+const { exportWaitAndRejectCase, exportCase } = require('../api/cases')
 
 const router = express.Router()
 const limiter = rateLimit({
@@ -10,6 +10,10 @@ const limiter = rateLimit({
 
 router.get('/export-case-waiting', limiter, async (req, res) => {
   await exportWaitAndRejectCase(req, res)
+})
+
+router.get('/export-case', async (req, res) => {
+  await exportCase(req, res)
 })
 
 module.exports = router
