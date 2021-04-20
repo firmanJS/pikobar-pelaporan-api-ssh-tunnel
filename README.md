@@ -1,6 +1,6 @@
 ### Pikobar Pelaporan API Koneksi Ke Database Menggunakan SSH Tunnel
 [![Maintainability](https://api.codeclimate.com/v1/badges/256debe3f520afa16e5a/maintainability)](https://codeclimate.com/github/firmanJS/pikobar-pelaporan-api-ssh-tunnel/maintainability)
-
+[![Node.js CI](https://github.com/firmanJS/pikobar-pelaporan-api-ssh-tunnel/actions/workflows/node.js.yml/badge.svg)](https://github.com/firmanJS/pikobar-pelaporan-api-ssh-tunnel/actions/workflows/node.js.yml)
 #### Cara Menggunakan
 copy file .env-sample di terminal dengan menggunakan perintah
 
@@ -27,6 +27,12 @@ SSH_KEY_PATH=# path to ssh key in your machine
 - install package nya dengan perintah sebagai berikut
 
 ```sh
-npm install
+yarn install
+```
+
+- running aplikasi dengan perintah sebagai berikut
+
+```sh
+yarn dev # development mode and watch
 ```
 <!-- pm2 ecosystem # generates a config file -->

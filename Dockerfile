@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm install && npm cache clean --force
+RUN yarn install && yarn cache clean --force
 
 # Bundle app source
 COPY . .

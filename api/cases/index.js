@@ -36,6 +36,7 @@ const exportCase = async (req, res) => {
         $ne: null
       }
     }
+    // const type = req.query?.type || 'default' // optional chaining not support in node 12.xx
     const result = await Case.aggregate(sqlCase(param))
     const data = result.map((r) => caseOutput(r))
     res.xls('data.xlsx', data)
