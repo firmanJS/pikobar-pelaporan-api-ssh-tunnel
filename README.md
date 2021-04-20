@@ -27,6 +27,12 @@ SSH_KEY_PATH=# path to ssh key in your machine
 - install package nya dengan perintah sebagai berikut
 
 ```sh
-npm install
+yarn install
+```
+
+- running aplikasi dengan perintah sebagai berikut
+
+```sh
+yarn dev # development mode and watch
 ```
 <!-- pm2 ecosystem # generates a config file -->
